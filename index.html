@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Mediview Clinic · Ichapur, Howrah</title>
+<meta name="description" content="The Mediview Clinic, Kantapukur 3rd ByeLane, Ichapur, Howrah. Diagnostic testing, OPD consultations and patient care. Open 24 hours.">
+<meta name="theme-color" content="#050507">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..600&display=swap">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"}}
+</script>
+</head>
+<body>
+<div class="atmos" aria-hidden="true"></div>
+
+<!-- Compact glass navigation (shown after the hero shatters, or when WebGL is unavailable) -->
+<header id="siteNav" class="nav nav--site">
+  <a class="brand" href="#home" data-go="home" aria-label="The Mediview Clinic, home">
+    <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="mg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#36D67E"/><stop offset="1" stop-color="#B9ABFF"/></linearGradient></defs><path d="M16 2l12 7v14l-12 7L4 23V9z" fill="none" stroke="url(#mg)" stroke-width="1.6"/><path d="M16 9v14M9 16h14" stroke="url(#mg)" stroke-width="2.2" stroke-linecap="round"/><path d="M16 2l-4 14 4 14M16 2l4 14-4 14" fill="none" stroke="#A9DFFF" stroke-opacity=".25"/></svg>
+    <span>The Mediview Clinic</span>
+  </a>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="siteLinks">Menu</button>
+  <nav id="siteLinks" class="links" aria-label="Main">
+    <a href="#home" data-go="home">Home</a><a href="#about" data-go="about">About</a><a href="#services" data-go="services">Services</a><a href="#facilities" data-go="facilities">Our Facilities</a><a href="#location" data-go="location">Contact</a>
+    <a class="btn btn--go btn--sm" href="#appointment" data-go="appointment">Book Appointment</a>
+  </nav>
+</header>
+
+<!-- HERO STAGE: WebGL canvas + DOM copy that is painted onto the 3D glass -->
+<section id="stage" aria-label="Introduction">
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <div id="navSlab" class="nav nav--slab">
+    <a class="brand" href="#home" data-go="home" aria-label="The Mediview Clinic, home">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2l12 7v14l-12 7L4 23V9z" fill="none" stroke="url(#mg)" stroke-width="1.6"/><path d="M16 9v14M9 16h14" stroke="url(#mg)" stroke-width="2.2" stroke-linecap="round"/></svg>
+      <span>The Mediview Clinic</span>
+    </a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="slabLinks">Menu</button>
+    <nav id="slabLinks" class="links" aria-label="Primary">
+      <a href="#home" data-go="home">Home</a><a href="#about" data-go="about">About</a><a href="#services" data-go="services">Services</a><a href="#facilities" data-go="facilities">Our Facilities</a><a href="#location" data-go="location">Contact</a>
+      <a class="btn btn--go btn--sm" href="#appointment" data-go="appointment">Book Appointment</a>
+    </nav>
+  </div>
+  <div id="heroPanel" class="panel">
+    <div class="copy" id="heroCopy">
+      <p class="eyebrow" data-print>ADVANCED DIAGNOSTICS &amp; PATIENT CARE</p>
+      <h1 data-print>Precision in<br>Every Diagnosis.</h1>
+      <p class="lede" data-print>Advanced diagnostic services, reliable reports and compassionate care, all in one place.</p>
+      <div class="cta">
+        <a class="btn btn--go" href="#appointment" data-go="appointment"><span data-print>Book Appointment</span></a>
+        <a class="btn btn--ghost" href="#services" data-go="services"><span data-print>Explore Services →</span></a>
+      </div>
+      <p class="trust" data-print>Reliable Testing · Professional Care</p>
+    </div>
+  </div>
+</section>
+
+<main id="main">
+  <section id="services" class="sec">
+    <div class="wrap">
+      <header class="sec-h"><h2>Diagnostic services</h2><p>What the clinic offers, as publicly listed. Please call to confirm the exact tests available on the day you visit.</p></header>
+      <div class="grid g4">
+        <article class="glass card"><span class="ico glow"><svg viewBox="0 0 24 24"><path d="M12 3c3 4 5 6.5 5 9.5a5 5 0 0 1-10 0C7 9.5 9 7 12 3z"/></svg></span><h3>Diagnostic testing</h3><p>Investigations requested by your doctor. Ask the front desk which tests are available today.</p></article>
+        <article class="glass card"><span class="ico glow"><svg viewBox="0 0 24 24"><path d="M6 3v5a4 4 0 0 0 8 0V3"/><path d="M10 12v2a4 4 0 0 0 8 0v-1"/><circle cx="18" cy="11" r="2"/></svg></span><h3>OPD consultations</h3><p>Outpatient consultations at the clinic. Confirm doctor availability before you travel.</p></article>
+        <article class="glass card"><span class="ico glow"><svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 13h5M10 17h5"/></svg></span><h3>Reports</h3><p>Ask the team how and when your report will be ready, and how to collect or receive it.</p></article>
+        <article class="glass card"><span class="ico glow"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><h3>Insurance assistance</h3><p>Public directories mention cashless insurance through empanelled TPAs. Check your plan with the desk.</p></article>
+      </div>
+      <!-- EDIT: once the clinic confirms specific tests, add cards here, e.g. Pathology, Blood tests, Digital X-ray, Ultrasound, ECG, Health checkup packages. Do not list a test the clinic does not provide. -->
+    </div>
+  </section>
+
+  <section id="about" class="sec">
+    <div class="wrap split">
+      <div><h2>About the clinic</h2></div>
+      <div class="prose">
+        <p>The Mediview Clinic serves patients in Ichapur and across Howrah from Kantapukur 3rd ByeLane, Kadamtala, Bantra.</p>
+        <p>Our aim is simple: clear communication, careful testing and respectful care, so you always know what is being done and what comes next.</p>
+        <!-- EDIT: add founding year, lead doctors and accreditations only after the clinic confirms them. -->
+      </div>
+    </div>
+  </section>
+
+  <section id="why" class="sec">
+    <div class="wrap">
+      <header class="sec-h"><h2>Why patients choose us</h2></header>
+      <div class="grid g4">
+        <div class="glass card sm"><h3>Open round the clock</h3><p>Public listings show the clinic open 24 hours.</p></div>
+        <div class="glass card sm"><h3>Close to home</h3><p>A neighbourhood location in Ichapur, Howrah.</p></div>
+        <div class="glass card sm"><h3>Clear explanations</h3><p>We take the time to explain tests and next steps.</p></div>
+        <div class="glass card sm"><h3>Reports you can follow</h3><p>Ask us anything about your results.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="facilities" class="sec">
+    <div class="wrap">
+      <header class="sec-h"><h2>Our facilities</h2><p>Facilities below come from public directory listings. Please confirm with the clinic.</p></header>
+      <div class="grid g3">
+        <div class="glass card"><span class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>24-hour access</h3><p>Listed as open 24 hours, every day.</p></div>
+        <div class="glass card"><span class="ico"><svg viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span><h3>OPD</h3><p>Outpatient department for consultations.</p></div>
+        <div class="glass card"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg></span><h3>Cashless insurance</h3><p>Ask which insurers and TPAs are accepted.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="appointment" class="sec">
+    <div class="wrap split">
+      <div><h2>Request an appointment</h2><p class="muted">Send your details and the clinic will contact you to confirm. A request is not a confirmed booking until the clinic confirms it.</p></div>
+      <form id="form" class="glass form" novalidate>
+        <label>Patient name<input name="name" required autocomplete="name"></label>
+        <label>Phone number<input name="phone" type="tel" required inputmode="tel" autocomplete="tel" pattern="[0-9+()\-\s]{8,16}"></label>
+        <label>Requested service<select name="service" required><option value="">Choose a service</option><option>Diagnostic testing</option><option>OPD consultation</option><option>Reports</option><option>Insurance assistance</option><option>Other / not sure</option></select></label>
+        <label>Preferred date<input name="date" type="date" required></label>
+        <button class="btn btn--go" type="submit">Send request</button>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <section id="location" class="sec">
+    <div class="wrap">
+      <header class="sec-h"><h2>Find us</h2></header>
+      <div class="split loc">
+        <div class="glass card">
+          <h3>The Mediview Clinic</h3>
+          <address>27, Kantapukur 3rd ByeLane,<br>Kadamtala, Bantra, Ichapur,<br>Howrah, West Bengal 711101</address>
+          <p><span class="muted">Hours</span><br>Open 24 hours (public listing)</p>
+          <p><span class="muted">Phone</span><br><span data-phone>Number to be added</span></p>
+          <p><span class="muted">WhatsApp / email</span><br><span data-reach>To be added</span></p>
+          <a class="btn btn--go" id="dir" href="#" target="_blank" rel="noopener">Get directions</a>
+        </div>
+        <div class="glass map"><iframe title="Map showing The Mediview Clinic" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=The+Mediview+Clinic+27+Kantapukur+3rd+ByeLane+Kadamtala+Bantra+Ichapur+Howrah+711101&amp;output=embed"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="foot">
+  <div class="wrap foot">
+    <div><strong>The Mediview Clinic</strong><p class="muted">27, Kantapukur 3rd ByeLane, Kadamtala, Bantra, Ichapur, Howrah 711101</p></div>
+    <nav aria-label="Footer"><a href="#about" data-go="about">About</a><a href="#services" data-go="services">Services</a><a href="#facilities" data-go="facilities">Facilities</a><a href="#appointment" data-go="appointment">Book</a><a href="#location" data-go="location">Contact</a></nav>
+    <p class="muted">© <span id="yr">2026</span> The Mediview Clinic. All rights reserved.</p>
+  </div>
+</footer>
+<script type="module" src="script.js"></script>
+</body>
+</html>
